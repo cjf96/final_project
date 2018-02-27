@@ -7,6 +7,8 @@ import App from './App';
 import firebase from'firebase/app';
 import 'bootstrap/dist/css/bootstrap.css';
 
+let string = "this is a test";
+
 
 // Define your configuration for Firebase
   // Initialize Firebase
