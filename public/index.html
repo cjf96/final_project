@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="author" content="Endeavour">
+  <meta name="description" content="Collection of datasets about SpaceX statistics.">
+  <meta name="keywords" content="Task,Management,Calendar,Checkmark,Organization,Simplistic,Interactive">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+  <link rel="icon" href="imgs/Mano-favicon.png" type="image" sizes="16x16">
+  <title> Endeavour </title>
+  <!--
+    manifest.json provides metadata used when your web app is added to the
+    homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+  -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/manoFavicon.png">
+  <!--
+    Notice the use of %PUBLIC_URL% in the tags above.
+    It will be replaced with the URL of the `public` folder during the build.
+    Only files inside the `public` folder can be referenced from the HTML.
+
+    Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+    work correctly both with client-side routing and a non-root public URL.
+    Learn how to configure a non-root public URL by running `npm run build`.
+  -->
+</head>
+
+
+<body>
+  <!-- Navigation Bar Component, it's fixed to make it available at all times. -->
+  <!-- Creates a responsive hamburger menu on smaller devices. -->
+  <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content"
+    aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Home button, instanteniously brings the user to the top of the page. -->
+    <a class="navbar-brand" href="#"><i class="fa fa-home" aria-label="Home Symbol"></i></a>
+    
+    <!-- Links for the Navigation Bar, each link has an assigned place on the page to easily access them. -->
+    <div class="collapse navbar-collapse" id="nav-content">   
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#team">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#signup">Sign Up</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#signin">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>   
+    <img class="d-block img-fluid" src="https://static1.squarespace.com/static/57664fffe4fcb52666c39d44/t/5aa6cecc419202ede636c0dd/1520881371554/Endeavour-01.png?format=2500w" alt="Endeavour wallpaper">
+    <!-- Provides the user essential informations they need to know before they embark on their journey. -->
+    <!-- jumbotron-fluid gets rid of radius and side-paddings. -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <section id="about" class="about"></section>
+        <h1 class="display-3 "><b>About Endeavour</b></h1>
+        <h2 class="type">Our website application allows you to create, organize,track your tasks.</h2>
+        <!-- Breaks up the space, easier to read due to division -->
+        <hr class="my-4">
+        <p class="lead">
+          We all live busy lives, thus it's important to always be on top of our meetings, things-to-do, and chores.
+          This is where Endeavour comes into play. Through our app you can have a secure task manager just by logging
+          in to your account and start building up the things that needs to be done. We thrive for simplicity and minimalistic interfaces
+          so you don't get entangled into several functions and options that one rarely utilizes. Our calendar feature also allows you to 
+          have an instant acces of the tasks you archived or the ones that are coming up in the next weeks.
+          You have a flight scheduled? No problem, we got it! Now, scroll down to find out more about what we strive for!
+        </p>
+        <div><p><button id="signup" type="button" class="btn btn-info">Sign Up!</button> <button id="login" type="button" class="btn btn-success">Log In!</button></p></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <noscript>
+      <!-- You need to enable JavaScript to run this app. -->
+    </noscript>
+    <h2>Sign Up and Manage your Schedule!</h2>
+    <br><br>
+    <div id="root" alt="voting and sign up page"></div>
+    <br><br>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+      <!-- Creates cards to properly read information about each of the categories and creates a user-friendly environment -->
+      <div class="cards">
+        <div class="container-card">
+          <div class="section-title">
+            <br/><br/>
+            <!-- Emphasis on the titles. -->
+            <h2 class="font-weight-bold" >What we do</h2>
+            <p>
+              Find out the features that we provide within our Endeavour application. Making life easier to navigate is our promise to you.
+            </p>
+            <br/><br/>
+          </div>
+        </div>
+        <!-- First card with Falcon 1 components -->
+        <!-- Using badges to highlight if the rocket was reusable or not -->
+        <div class="card-item">
+          <div class="containerimage">
+            <img src="http://www.ieikuwait.org/images/login-icon.png" alt="Key and a lock to illustrate login">
+          </div>
+          <div class="card-content">
+            <h4><b>Secure Connection</b></h4> 
+            <hr class="my-3">
+            <p>
+              We are workign with sophisticated servers that keeps your information safe.
+              Easy to sign up and sign in into our application.
+            </p>
+          </div>
+        </div>
+
+        <!-- Creates the content of each of the cards -->
+        <div class="card-item">
+          <div class="containerimage">
+            <img src="https://lh3.googleusercontent.com/JI03c8U3TElg-SP9FbTPtIjEzNafWyLSxy89HmFrTE8_-oEbe0C_kuKbG8yDKQUoCqE=w300" alt="To do list icon to illustrate tasks">
+          </div>
+          <div class="card-content">
+            <h4><b>Add and Update Tasks</b></h4> 
+            <hr class="my-3">
+            <p>
+              Add your daily tasks and keep track of them throughout the week. Once you completed a task feel free to
+              remove it from the menu.
+            </p>
+          </div>
+        </div>
+
+        <!-- Creates the content of each of the cards -->
+        <div class="card-item">
+          <div class="containerimage2">
+            <img src="https://png.icons8.com/color/260/calendar-1.png" alt="Icon of a calendar">
+          </div>
+          <div class="card-content">
+            <h4><b>Calendar Feature</b></h4> 
+            <hr class="my-3">
+            <p>
+              Get an in-depth view of your busy schedule. With the Calendar you can see archived tasks that you already completed.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="container-card">
+          <br/><br/>
+          <hr class="my-3">
+          <div class="section-title">
+            <!-- Emphasis on the titles. -->
+            <section id="team" class="team" ></section> 
+            <h2 class="font-weight-bold">Endeavour Team</h2>
+            <p>
+              Meet the team of developers and designers who are updating Endeavour based out of Seattle, WA. 
+              Our motive is to solve to problems for people by providing them with applications they can use in their daily lives.
+              Please feel free to reach out to us if you have any questions about our app.
+            </p>
+          </div>
+        </div>
+          
+
+        <div class="card-item">
+          <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/17098457_1232798613494088_1509029848289946794_n.jpg?oh=c9339a52111f789eb71159beacb1d70d&oe=5B066B19" alt="Picture of Cole French">
+          <div class="card-content">
+            <h4><b>Phillip Park</b></h4> 
+            <hr class="my-3">
+            <p>
+              Director: Back–End Development 
+            </p>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/16143275_426357944369720_590317244828834168_n.jpg?oh=256898bc7012495a6beab7a1505a823d&oe=5B32E59D" alt="Picture of Phillip Park">
+          <div class="card-content">
+            <h4><b>Phillip Park</b></h4> 
+            <hr class="my-3">
+            <p>
+              Director: Back–End Development
+            </p>
+          </div>
+        </div>
+
+        <!-- Creates the content of each of the cards -->
+        <div class="card-item">
+              <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/24862511_1802187436489505_4784991892378928939_n.jpg?oh=159fce6f559ec958b5e97c87da7fa0bc&oe=5B4B9066" alt="Picture of Mano Barkovics">
+            <div class="card-content">
+              <h4><b>Mano Barkovics</b></h4> 
+              <hr class="my-3">
+              <p>
+                Director: Front-End Development
+              </p>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/28685260_924781977671959_8457614327328437036_n.jpg?oh=b81baf178512fb18fc340c446c4e10de&oe=5B02F257" alt="Picture of Jessie Kim">
+          <div class="card-content">
+            <h4><b>Jessie Kim</b></h4> 
+            <hr class="my-3">
+            <p>
+              Director: Front-End Development
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <img class="d-block img-fluid" src="https://static1.squarespace.com/static/57664fffe4fcb52666c39d44/t/5a8f6186c8302568a69673c3/
+      1519346085946/earthBackground.png?format=2500w" alt="Planet Earth night cycle">
+      <!-- Allows text to be overlayed upon the background image, and set coordinates on where the text should appear. -->
+      <div id="center" class="centered">
+        <p>Crafted with care by: Mano Barkovics, Cole French, Jessie Kim, and Phillip Park</p>
+        <p>INFO 343 - Final Group Project</p>
+        <p> 
+          Only for educational purposes.
+        </p>
+        <p>
+          Copyright © 2018, All Rights Reserved, Endeavour LLC
+        </p>
+      </div>
+      <!-- Implementing Font Awesome by creating a LinkedIn icon and link to my page. -->
+      <div class="right">
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

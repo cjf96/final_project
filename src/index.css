@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box; /* all elements include border and padding in size */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+p {
+  text-align: center; 
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* 1 activates it, while 0 disables it.*/
+  flex-grow: 0;
+  background-color: #eee;
+  padding: .5em;
+}
+
+.nav-link:hover {
+  border-bottom: .1rem solid white;
+  padding-bottom: .1rem;
+}
+
+header {
+  margin-top: 55px;
+}
+
+section {
+  padding-top: 50px; 
+  margin: 25px 0 25px 0;
+}
+
+.section-title {
+  padding: 0 5rem 0 5rem;
+}
+
+.containerimage {
+  padding: 40px;
+}
+
+.containerimage2 {
+  padding: 60px;
+}
+
+.card-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 250px;
+  background: #ffffff;
+  margin: 0.75rem;
+  border-radius: 6px;
+  transition: .4s ease;
+  /* X and Y offsets relative to the element, blur and spread radii, and color. */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+}
+
+/* Sets properties for the content of the cards to appeal in an organized way. */
+.card-content {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  height: 200px;
+}
+
+.card-item > img {
+  /* Use multiple property values (similar to padding, margin, and border) */
+  border-radius: 6px 6px 0 0;
+  max-height: 250px;
+  max-width: 300px;
+
+  object-fit: cover;
+  margin: auto;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+/* When hovering over cards, shadow appears to help the user better understand which cards they are in. */
+.card-item:hover {
+  transition: .4s ease;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  transition: .6s ease;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
+}
+
+.preparation-component {
+  transition: .5s ease;
+}
+
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #efefef;
+  text-align: center;
+}
+
+/* Centers the message from the creator. */
+.centered {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5em;
+}
+
+/* Aligns the LinkedIn icon and link on the right side. */
+.right {
+  position: absolute;
+  top: 65%;
+  right: 5%;
+  transform: translate(0, 0%);
+  color: white;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.embed-responsive {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 950px) {
+  #center {
+      font-size: 8px;
+  }
+}
+
+/* Changes the font size for the footer to look better on mobile devices. */
+.center > p {
+  font-size: 10px;
+}
