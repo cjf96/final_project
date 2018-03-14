@@ -5,6 +5,7 @@ import { Auth } from './Auth';
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { Signup } from './Signup';
 import { Login } from './Login';
+import { SplashPage } from './SplashPage';
 
 class App extends Component {
     constructor(props) {
@@ -41,10 +42,12 @@ class App extends Component {
                 <div className="container">
                     <div className="container">
                         <div className='nav justify-content-end'>
-                            <li class="nav-item"><Link to="/Signup">Signup</Link></li>
-                            <li class="nav-item"> <Link to="/Login">Login</Link> </li>
+                            <li className="nav-item"><Link to="/Signup">Signup</Link></li>
+                            <li className="nav-item"> <Link to="/Login">Login</Link> </li>
+                            <li className="nav-item"> <Link to="/Splash">Splash</Link> </li>
                             <Route path="/Signup" component={Signup} />
                             <Route path="/Login" component={Login} />
+                            <Route path="/Splash" component={SplashPage} />
                         </div>
                     </div>
                 </div>
