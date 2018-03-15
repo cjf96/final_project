@@ -7,6 +7,7 @@ import { Signup } from './Signup';
 import { Login } from './Login';
 import { ToDoList } from './ToDoList';
 import { Test } from './Test';
+import { SplashPage } from './SplashPage';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import logo from "./textlogo.png";
 
@@ -51,107 +52,110 @@ class App extends Component {
             });
     }
     render() {
-        if (this.state.user && !this.state.loaded) {
-            return (
-                <div>
-                    <Router>
-                        <div >
-                            <div>
-                                <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-                                    <a class="navbar-brand" href="#">
-                                        <img className="homePic" src={logo} alt="logo" />
-                                    </a>
-                                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                                        <ul class="navbar-nav">
-                                            <li class="nav-item active">
+        // if (this.state.user && !this.state.loaded) {
+        return (
+            <div>
+                <Router>
+                    <div >
+                        <div>
+                            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">
+                                    <img className="homePic" src={logo} alt="logo" />
+                                </a>
+                                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item active">
 
-                                                <Link to="/" className="nav-link">
-                                                    Home <span class="sr-only">(current)</span>
-                                                </Link>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Calendar</a>
-                                            </li>
+                                            <Link to="/Splash" className="nav-link">
+                                                About <span class="sr-only">(current)</span>
+                                            </Link>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Calendar</a>
+                                        </li>
 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Layout
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Layout
                                         </a>
-                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="#">List View</a>
-                                                    <a class="dropdown-item" href="#">Card View</a>
-                                                </div>
-                                            </li>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="#">List View</a>
+                                                <a class="dropdown-item" href="#">Card View</a>
+                                            </div>
+                                        </li>
 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Progress
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Progress
                                         </a>
-                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="#">Active</a>
-                                                    <a class="dropdown-item" href="#">Complete</a>
-                                                </div>
-                                            </li>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="#">Active</a>
+                                                <a class="dropdown-item" href="#">Complete</a>
+                                            </div>
+                                        </li>
 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Advance
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Advance
                                         </a>
-                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="#">Due Date</a>
-                                                    <a class="dropdown-item" href="#">Per Project</a>
-                                                    <a class="dropdown-item" href="#">Assigned By</a>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    UW Resources
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="#">Due Date</a>
+                                                <a class="dropdown-item" href="#">Per Project</a>
+                                                <a class="dropdown-item" href="#">Assigned By</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                UW Resources
                                         </a>
-                                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <Link to='/ic' className="dropdown-item"> Instructional Center </Link>
-                                                    <Link to='/clue' className="dropdown-item"> Center for Learning and Undergraduate Enrichment</Link>
-                                                    <Link to='/private' className="dropdown-item"> Private Tutoring</Link>
-                                                    <Link to='/llc' className="dropdown-item"> Lanugage Learning Center</Link>
-                                                    <Link to='/owrc' className="dropdown-item"> Odegarrd Writing and Research Center</Link>
-                                                </div>
-                                            </li>
-                                            <form class="form-inline my-2 my-lg-0">
-                                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <Link to='/ic' className="dropdown-item"> Instructional Center </Link>
+                                                <Link to='/clue' className="dropdown-item"> Center for Learning and Undergraduate Enrichment</Link>
+                                                <Link to='/private' className="dropdown-item"> Private Tutoring</Link>
+                                                <Link to='/llc' className="dropdown-item"> Lanugage Learning Center</Link>
+                                                <Link to='/owrc' className="dropdown-item"> Odegaard Writing and Research Center</Link>
+                                            </div>
+                                        </li>
+                                        <form class="form-inline my-2 my-lg-0">
+                                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                        </form>
+                                    </ul>
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link">Setting</a>
+                                        </li>
+                                        <li class="navbar-item">
+                                            <form className="button">
+                                                <button className="btn" type="button" onClick={() => this.handleSignOut()}>
+                                                    <Link to="/Login">Sign Out</Link>
+                                                </button>
                                             </form>
-                                        </ul>
-                                        <ul class="navbar-nav ml-auto">
-                                            <li class="nav-item">
-                                                <a class="nav-link">Setting</a>
-                                            </li>
-                                            <li class="navbar-item">
-                                                <form className="button">
-                                                    <button className="btn" type="button" onClick={() => this.handleSignOut()}>Sign Out</button>
-                                                </form>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                            <div>
-                                <Route path="/Signup" component={Signup} />
-                                <Route path="/Login" component={Login} />
-                                <Route path="/ToDoList" component={ToDoList} />
-                                <Route path="/Test" component={Test} />
-                                <Route path='/ic' component={() => window.location = 'http://depts.washington.edu/ic/'} />
-                                <Route path='/clue' component={() => window.location = 'http://webster.uaa.washington.edu/asp/website/get-help/clue/home/'} />
-                                <Route path='/llc' component={() => window.location = 'https://depts.washington.edu/llc/'} />
-                                <Route path='/private' component={() => window.location = 'https://webster.uaa.washington.edu/asp/website/get-help/private-tutoring/'} />
-                                <Route path='/owrc' component={() => window.location = 'https://depts.washington.edu/owrc/'} />
-                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
                         </div>
-                    </Router>
-                </div>
-            );
-        }
+                        <div>
+                            <Route path="/Signup" component={Signup} />
+                            <Route path="/Login" component={Login} />
+                            <Route path="/ToDoList" component={ToDoList} />
+                            <Route path="/Test" component={Test} />
+                            <Route path="/Splash" component={SplashPage} />
+                            <Route path='/ic' component={() => window.location = 'http://depts.washington.edu/ic/'} />
+                            <Route path='/clue' component={() => window.location = 'http://webster.uaa.washington.edu/asp/website/get-help/clue/home/'} />
+                            <Route path='/llc' component={() => window.location = 'https://depts.washington.edu/llc/'} />
+                            <Route path='/private' component={() => window.location = 'https://webster.uaa.washington.edu/asp/website/get-help/private-tutoring/'} />
+                            <Route path='/owrc' component={() => window.location = 'https://depts.washington.edu/owrc/'} />
+                        </div>
+                    </div>
+                </Router>
+            </div>
+        );
+        // }
     }
 }
 

@@ -51,9 +51,9 @@ export class Signup extends Component {
     }
 
     render() {
-        if (this.state.user && !this.state.loaded) {
-            return <Redirect to='/' />;
-        }
+        // if (this.state.user && !this.state.loaded) {
+        //     return <Redirect to='/' />;
+        // }
 
         return (
             <div className="container">
