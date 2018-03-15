@@ -1,0 +1,42 @@
+#logo {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+}
+
+img {
+    height: 150px;
+    width: auto;
+}
+
+footer {
+    font-size: 8pt;
+    text-align: center;
+}
+
+#space {
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.card {
+    height: auto;
+    width: 220px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#ftr-1, #ftr-2, #ftr-3 {
+    height: auto;
+    width: 305px;
+    padding: 1rem;
+}
