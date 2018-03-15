@@ -11,12 +11,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 // Define your configuration for Firebase
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyD7y6JWVwvNdw_rutCAch4DN_VTWHVXjzY",
-    authDomain: "uw-endeavour.firebaseapp.com",
-    databaseURL: "https://uw-endeavour.firebaseio.com",
-    projectId: "uw-endeavour",
-    storageBucket: "uw-endeavour.appspot.com",
-    messagingSenderId: "170411021679"
+    apiKey: "AIzaSyAf7tkeAMNW9Pdfkf_oUibrYyD3KwzRu50",
+    authDomain: "endeavor-4516f.firebaseapp.com",
+    databaseURL: "https://endeavor-4516f.firebaseio.com",
+    projectId: "endeavor-4516f",
+    storageBucket: "endeavor-4516f.appspot.com",
+    messagingSenderId: "1011619626034"
 };
 firebase.initializeApp(config);
 

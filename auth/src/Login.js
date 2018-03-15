@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 import firebase from 'firebase';
 import { AuthLogin } from './AuthLogin';
+import { Redirect } from 'react-router-dom';
 
 
 export class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            user: null,
+            loaded: false
         };
         this.handleSignIn = this.handleSignIn.bind(this);
-        this.handleSignOut = this.handleSignOut.bind(this);
-
     }
     componentDidMount() {
         this.stopWatchingAuth = firebase.auth().onAuthStateChanged(firebaseUser => {
@@ -22,12 +22,13 @@ export class Login extends Component {
                     errorMessage: '',
                     email: '',
                     password: '',
-                    username: ''
+                    username: '',
+                    loaded: false
                 })
             }
             else {
                 this.setState({
-                    user: null
+                    user: null, loaded: true
                 })
             }
         })
@@ -40,12 +41,12 @@ export class Login extends Component {
                 this.setState({ errorMessage: err.message })
             })
     }
-    handleSignOut() {
-        firebase.auth().signOut()
-    }
-
 
     render() {
+        if (this.state.user && !this.state.loaded) {
+            return <Redirect to='/' />;
+        }
+
         return (
             <div className="container">
                 {this.state.errorMessage &&
@@ -62,12 +63,6 @@ export class Login extends Component {
                     <AuthLogin handleSignIn={this.handleSignIn} />
                 }
 
-                {this.state.user &&
-                    <button className="btn btn-warning mr-2"
-                        onClick={() => this.handleSignOut()}>
-                        Sign Out
-                    </button>
-                }
 
             </div>
         );

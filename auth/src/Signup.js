@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import firebase from 'firebase';
 import { AuthSignup } from './AuthSignup';
-// import { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 
 export class Signup extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            user: null,
+            loaded: false
         };
         this.handleSignUp = this.handleSignUp.bind(this);
     }
@@ -22,13 +24,12 @@ export class Signup extends Component {
                     email: '',
                     password: '',
                     username: '',
-                    status: true,
                     loaded: false
                 })
             }
             else {
                 this.setState({
-                    user: null, loaded: true, status: false
+                    user: null, loaded: true
                 })
             }
         })
@@ -50,9 +51,9 @@ export class Signup extends Component {
     }
 
     render() {
-        // if (this.state.user && !this.state.loaded) {
-        //     return <Redirect to='/' />;
-        // }
+        if (this.state.user && !this.state.loaded) {
+            return <Redirect to='/' />;
+        }
 
         return (
             <div className="container">
